@@ -1,0 +1,30 @@
+
+#Manin  menu
+def menu():
+  print("1. Add numbers")
+  print("2. Subtract numbers")
+  print("3. Quit")
+
+  choice = input("Enter a choice")
+  if choice == "1":
+    num1,num2 = getNumbers()
+    ans = addNumbers(num1,num2)
+    print(num1, "+", num2,"=", ans)
+  elif choice == "3":
+    exit()
+    
+  menu()
+
+#Getting numbers
+def getNumbers():
+  numA = int(input("Please input number 1: "))
+  numB = int(input("Please input number 2: "))
+  return numA,numB
+
+#Adding numbers
+def addNumbers(num1,num2):
+  addition = num1 + num2
+  return addition
+
+#Program starts here
+menu()
